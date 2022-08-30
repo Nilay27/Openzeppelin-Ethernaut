@@ -10,7 +10,6 @@ function calculateProgress(updatedContent) {
   for (i = 0; i < numLines; i++) {
     var line = lines[i];
     if (line.indexOf("x") == 3 && line.indexOf("-") == 0) {
-      
       totalSolved += 1;
     } else {
       continue;
@@ -45,5 +44,3 @@ exports.updateTotalSolved = function (challengeName) {
     fs.writeFileSync("./README.md", updatedContent);
   }
 };
-
-//updateTotalPoints("ChooseANickname.js")
