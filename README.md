@@ -1,7 +1,7 @@
 ---
  Title: Ethernaut
  Description: Solutions for Openzeppelin's Ethernaut
- Progress: 4/25
+ Progress: 5/25
 ---
 * Executable solutions for all challenges from [Ethernaut](https://ethernaut.openzeppelin.com/)
 
@@ -10,7 +10,7 @@
 - [x] Fallout
 - [x] CoinFlip
 - [x] Telephone
-- [ ] Token
+- [x] Token
 - [ ] Delegation
 - [ ] Force
 - [ ] Vault
