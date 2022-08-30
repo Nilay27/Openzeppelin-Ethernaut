@@ -40,14 +40,26 @@
 yarn
 ```
 
-* Setup `.env` file with your own keys
-
 * Compile all the contracts
 ```
-npx hardhat compile
+yarn c
+```
+
+* Run linter for all tests
+```
+yarn l
+```
+* Run linter for all contracts
+```
+yarn sl
 ```
 
 * Running the tests will deploy the contract on local network and execute the hack
 ```
 npx hardhat test test/ContractName.js
+```
+
+* To compile and hack all contracts
+```
+yarn t
 ```
