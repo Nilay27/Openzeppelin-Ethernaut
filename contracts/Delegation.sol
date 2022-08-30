@@ -31,7 +31,7 @@ contract Delegation {
 
     /**
      * We can trigger fallback function with msg.data containing
-     * signature of pwn(). 
+     * signature of pwn().
      * As pwn() changes value of slot 0 variable, hence value of owner
      * in Delegation will change to msg.sender
      */
