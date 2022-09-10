@@ -1,7 +1,7 @@
 ---
  Title: Ethernaut
  Description: Solutions for Openzeppelin's Ethernaut
- Progress: 7/25
+ Progress: 10/25
 ---
 * Executable solutions for all challenges from [Ethernaut](https://ethernaut.openzeppelin.com/)
 
@@ -13,9 +13,9 @@
 - [x] Token
 - [x] Delegation
 - [x] Force
-- [ ] Vault
-- [ ] King
-- [ ] Reentrancy
+- [x] Vault
+- [x] King
+- [x] Reentrancy
 - [ ] Elevator
 - [ ] Privacy
 - [ ] GatekeeperOne
